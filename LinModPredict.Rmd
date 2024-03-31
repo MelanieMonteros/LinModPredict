@@ -63,7 +63,7 @@ predict(model.2,target, interval= c("prediction"))
 
 ```{r}
 model.3 <- lm(SIMS~ARM+GRIP, data=data)
-summary.lm(model)
+summary.lm(model.3)
 ```
 
 
@@ -74,3 +74,12 @@ predict(model.3,target, interval= c("prediction"))
 ```{r}
 predict(model.3,target, interval= c("confidence"))
 ```
+
+
+### Compare Model1 with Model3
+```{r}
+anova(model.1, model)
+```
+
+
+
